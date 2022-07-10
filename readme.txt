@@ -1,5 +1,5 @@
 === Plugin Name ===
-Plugin Name: Switch User
+Plugin Name: iBryl Switch User
 Contributors: brilik
 Tags: switch, users
 Requires at least: 4.7

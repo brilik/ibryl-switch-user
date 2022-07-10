@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Plugin Name: Switch User
+ * Plugin Name: iBryl Switch User
  * Plugin URI: https://wordpress.org/plugins/ibryl-switch-user/
  * Description: Its mini tips for quickly switch by users.
  * Version: 1.0.0
