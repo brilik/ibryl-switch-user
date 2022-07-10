@@ -1,0 +1,118 @@
+$color-orange: lightsalmon;
+$color-primary: #28303d;
+
+#plugin-switch-user {
+  position: fixed;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: $color-orange;
+  text-align: center;
+  padding: 15px 5px 15px 35px;
+  border-radius: 15px 0 0 15px;
+  box-shadow: 2px 2px 15px $color-primary;
+  min-width: 180px;
+  z-index: 9;
+
+  [type=button] {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: $color-primary;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  button.arrow {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 80px;
+    position: absolute;
+    left: -20px;
+    top: 20%;
+    border-radius: 7px 0 0 7px;
+    color: $color-orange;
+    box-shadow: 0 0 10px $color-primary;
+    background-color: $color-primary;
+
+    &.left {
+      padding-right: 6px;
+    }
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    -webkit-mask-image: linear-gradient(to top, transparent, $color-primary), linear-gradient(to left, transparent 7px, $color-primary 7px);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.5s, -webkit-mask-position 0.5s;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      background-color: $color-primary;
+    }
+
+    &:hover {
+      -webkit-mask-position: left top;
+    }
+
+    @keyframes background {
+      from {
+        overflow-y: hidden;
+      }
+      to {
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  &.open {
+    right: 0;
+    animation-name: menuOpen;
+    animation-duration: 0.3s;
+    @keyframes menuOpen {
+      from {
+        right: -175px;
+      }
+      to {
+        right: 0;
+      }
+    }
+  }
+
+  &.close {
+    right: -175px;
+    animation-name: menuClose;
+    animation-duration: 0.3s;
+    @keyframes menuClose {
+      from {
+        right: 0;
+      }
+      to {
+        right: -175px;
+      }
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
