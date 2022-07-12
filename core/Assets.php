@@ -31,7 +31,8 @@ class Assets {
 		wp_enqueue_style(
 			IBRYL_SWITCH_USER_PLUGIN_NAME . '-css',
 			IBRYL_SWITCH_USER_DIR_PATH . 'assets/css/iswu-main.min.css',
-			[], IBRYL_SWITCH_USER_VERSION
+			[],
+			IBRYL_SWITCH_USER_VERSION
 		);
 		/** Includes scripts. */
 		wp_enqueue_script(

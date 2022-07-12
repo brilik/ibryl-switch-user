@@ -1,7 +1,7 @@
 {
   "name": "ibryl-switch-user",
   "description": "Plugin for quickle swith to user",
-  "version": "0.0.1",
+  "version": "1.0",
   "private": true,
   "author": "Vitalii Bryl",
   "devDependencies": {
