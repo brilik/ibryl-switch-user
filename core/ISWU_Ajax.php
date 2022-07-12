@@ -1,8 +1,8 @@
 <?php
 
-namespace Core;
+namespace ISWU_Core;
 
-class Ajax {
+class ISWU_Ajax {
 
 	/**
 	 * Inits ajax.
