@@ -1,11 +1,12 @@
 function PluginSwitchUser() {
     const d = document,
-        widget = d.getElementById(iswu.pluginName),
+        widget = d.createElement("div"),
         arrowLeft = "\u2770",
         arrowRight = "\u2771",
         arrow = d.createElement("button")
 
     PluginSwitchUser.prototype.init = () => {
+        this.widget.pasteElement()
         this.widget.createArrow()
         this.getUsersAjax()
         this.scrollAnimate()
@@ -14,7 +15,7 @@ function PluginSwitchUser() {
     PluginSwitchUser.prototype.getUsersAjax = () => {
         let data = {
             action: "switch_user_get_users",
-            slug: iswu.pluginName,
+            slug: iswu.pluginSlug,
         }
 
         fetch(iswu.ajaxUrl, {
@@ -34,6 +35,12 @@ function PluginSwitchUser() {
     }
 
     PluginSwitchUser.prototype.widget = {
+        pasteElement: () => {
+            widget.id = iswu.pluginSlug
+            widget.classList.add("close")
+            widget.classList.add("hidden")
+            d.body.insertAdjacentElement("afterbegin", widget)
+        },
         createArrow: () => {
             arrow.type = "button"
             arrow.textContent = arrowLeft
@@ -113,14 +120,13 @@ function PluginSwitchUser() {
             list.appendChild(item)
         }
 
-        d.getElementById(iswu.pluginName).appendChild(list)
+        d.getElementById(iswu.pluginSlug).appendChild(list)
     }
 
     PluginSwitchUser.prototype.scrollAnimate = () => {
         // Adds scroll and key up listener in window
         ["scroll", "keyup"].forEach((eventName) => {
             window.addEventListener(eventName, (event) => {
-                console.log()
                 if (event.target !== widget && widget.classList.contains("open")) {
                     setTimeout(() => {
                         PluginSwitchUser.prototype.widget.close()
