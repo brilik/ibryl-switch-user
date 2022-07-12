@@ -1,8 +1,8 @@
 <?php
 
-namespace Core;
+namespace ISWU_Core;
 
-class Bootstrap {
+class ISWU_Bootstrap {
 
 	/**
 	 * inits core.
@@ -10,10 +10,10 @@ class Bootstrap {
 	 * @return void
 	 */
 	public static function init() {
-		( new Ajax() );
+		( new ISWU_Ajax() );
 		add_action( 'init', function () {
 			if ( wp_doing_ajax() || is_user_logged_in() || is_admin() ) {
-				( new Assets() );
+				( new ISWU_Assets() );
 			}
 		} );
 	}

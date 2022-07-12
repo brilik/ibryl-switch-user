@@ -1,8 +1,8 @@
 <?php
 
-namespace Core;
+namespace ISWU_Core;
 
-class Assets {
+class ISWU_Assets {
 
 	/**
 	 * Init assets.
@@ -45,7 +45,7 @@ class Assets {
 		/** Localize scripts. */
 		wp_localize_script(
 			IBRYL_SWITCH_USER_PLUGIN_NAME . '-js',
-			'iswu',
+			IBRYL_SWITCH_USER_PLUGIN_SHORT_NAME,
 			[
 				'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
 				'pluginName' => IBRYL_SWITCH_USER_PLUGIN_NAME,
