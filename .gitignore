@@ -1,5 +1,6 @@
 .ssh/
 .idea/
+svn/
 node_modules/
 
 assets/css/**/*.min.css
