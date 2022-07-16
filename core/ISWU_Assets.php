@@ -5,7 +5,7 @@ namespace ISWU_Core;
 class ISWU_Assets {
 
 	/**
-	 * Init assets.
+	 * Inits assets.
 	 */
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueueScripts' ] );
@@ -37,8 +37,8 @@ class ISWU_Assets {
 			IBRYL_SWITCH_USER_PLUGIN_SLUG . '-js',
 			IBRYL_SWITCH_USER_PLUGIN_SHORT_NAME,
 			[
-				'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
-				'pluginSlug' => IBRYL_SWITCH_USER_PLUGIN_SLUG,
+				'ajaxUrl'         => admin_url( 'admin-ajax.php' ),
+				'pluginSlug'      => IBRYL_SWITCH_USER_PLUGIN_SLUG,
 				'pluginShortName' => IBRYL_SWITCH_USER_PLUGIN_SHORT_NAME,
 			]
 		);

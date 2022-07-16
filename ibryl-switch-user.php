@@ -14,7 +14,7 @@ namespace ISWU_Core;
 
 define( 'IBRYL_SWITCH_USER_PLUGIN_SLUG', 'plugin-switch-user' );
 define( 'IBRYL_SWITCH_USER_PLUGIN_SHORT_NAME', 'iswu' );
-define( 'IBRYL_SWITCH_USER_VERSION', 1.0 );
+define( 'IBRYL_SWITCH_USER_VERSION', "1.0.1" );
 define( 'IBRYL_SWITCH_USER_DIR_PATH', plugin_dir_url( __FILE__ ) );
 
 require_once 'core/ISWU_Bootstrap.php';

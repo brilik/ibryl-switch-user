@@ -1,6 +1,6 @@
 # WordPress Plugin
 #### This plugin can to quickly switch user by click. It is comfortable for develop themes and plugins.
-###### version 1.0.0
+###### version 1.0.1
 
 ## Require
 1. Move to project: `cd ../project_name/wp-content/plugins/`

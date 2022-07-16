@@ -56,6 +56,8 @@ class ISWU_Ajax {
 		wp_set_current_user( $id, $user_info->user_login );
 		wp_set_auth_cookie( $id );
 
+		do_action( 'wp_login', $user_info->user_login, $user_info );
+
 		wp_send_json_success( [
 			'id'      => $user_info->user_login,
 			'message' => "You are logged in as {$user_info->user_login}",

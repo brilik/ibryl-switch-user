@@ -4,7 +4,7 @@ Contributors: brilik
 Tags: switch, users
 Requires at least: 4.7
 Tested up to: 6.0
-Stable tag: 1.0
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,12 +13,17 @@ This plugin can to quickly switch user by click. It is comfortable for develop t
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+This plugin can to quickly switch user by click. It is comfortable for develop themes and plugins.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+After load page, loading neat closed sidebar from right. By click on arrow it show or hide sidebar. Sidebar is
+displaying all registered WordPress users. By click on user is ajax send user ID to back end where switch user.
+After response is JavaScript reload page with registered new user.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed bugs.
+* Fixed description.
 
 = 1.0 =
 * Added switcher wrapper to your theme with all users.
