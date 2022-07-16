@@ -30,9 +30,7 @@ After response is JavaScript reload page with registered new user.
 * Uses ajax technology so as not to slow down loading.
 * Uses minimization files so as not to slow down loading.
 
-== A brief Markdown Example ==
-
-Ordered list:
+== Why using iBryl Switch User? ==
 
 1. Quickly switches user by click.
 2. Doesn't slow down loading.
